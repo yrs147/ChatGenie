@@ -14,7 +14,7 @@ You will need the following to run the project:
 -   A OpenAI API key
 -   Add the OpenAI api_key in .env file
 
-### Installing
+### Setting Up the CLI
 
 1.  Clone the repository to your local machine:
 
@@ -27,22 +27,27 @@ git clone https://github.com/yrs147/go-gpt-cli.git
 ```
 cd ChatGenie
 ```
+3. Install Dependencies
 
-3.  Generate an Open AI API key from the [website](https://beta.openai.com/account/api-keys)
+```
+go mod tidy
+```
+
+4.  Generate an Open AI API key from the [website](https://beta.openai.com/account/api-keys)
 
 ![image](https://user-images.githubusercontent.com/98258627/213876014-b3f15700-e279-4515-bb25-b706d63e75b6.png)
 
-4. Add it in the .env file 
+5. Add it in the .env file 
 
 ![image](https://user-images.githubusercontent.com/98258627/213876103-4b5ded86-98ee-461e-bf14-5dbd09bdc7fc.png)
 
-5. Run the project 
+6. Run the project 
 
 ```
 go run main.go
 
 ```
-5.  Start chatting with ChatGPT by typing in a question or statement and pressing enter.
+7.  Start chatting with ChatGPT by typing in a question or statement and pressing enter.
 
 ### Using the chatbot
 
