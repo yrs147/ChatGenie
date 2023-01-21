@@ -25,7 +25,7 @@ git clone https://github.com/yrs147/go-gpt-cli.git
 2.  Navigate to the project directory:
 
 ```
-cd ChatGPT
+cd ChatGenie
 ```
 
 3.  Generate an Open AI API key from the [website](https://beta.openai.com/account/api-keys)
