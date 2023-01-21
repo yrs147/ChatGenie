@@ -46,9 +46,8 @@ go run main.go
 
 ### Using the chatbot
 
-The chatbot will continue running until you type in "quit" and press enter.
+
 ![image](https://user-images.githubusercontent.com/98258627/213878247-fe13a9b2-4ae0-4ab0-b906-4470495c0dab.png)
 
+The chatbot will continue running until you type in **quit** and press enter.
 
-
-`Say Something('quit' to end):`
