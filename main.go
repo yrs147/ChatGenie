@@ -11,23 +11,27 @@ import (
 	"github.com/spf13/viper"
 )
 
-func GetResponse(client gpt3.Client , ctx context.Context , question string){
-	client.CompletionStreamWithEngine(ctx , gpt3.TextDavinci003Engine, gpt3.CompletionRequest{
+func GetResponse(client gpt3.Client, ctx context.Context, question string) {
+	client.CompletionStreamWithEngine(ctx, gpt3.TextDavinci003Engine, gpt3.CompletionRequest{
 		Prompt: []string{
 			question,
 		},
-		MaxTokens: gpt3.IntPtr(3000),
-		Temperature:  gpt3.Float32Ptr(0),
-		},func(resp *gpt3.CompletionResponse){
-			fmt.Print(resp.Choices[0].Text)
-		})
-		if err != nil{
-			fmt.Println(err)
-			os.Exit(13)
-		}
-
+		MaxTokens:   gpt3.IntPtr(3000),
+		Temperature: gpt3.Float32Ptr(0),
+	}, func(resp *gpt3.CompletionResponse) {
+		fmt.Print(resp.Choices[0].Text)
+	})
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(13)
 	}
+	fmt.Printf("\n")
+
 }
+
+type NullWriter int
+
+func (NullWriter) Write([]byte) (int, error) { return 0, nil }
 
 func main() {
 	viper.SetConfigFile(".env")
