@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"context"
 	"fmt"
+	"log"
 	"os"
 
 	"github.com/PullRequestInc/go-gpt3"
@@ -12,7 +13,7 @@ import (
 )
 
 func GetResponse(client gpt3.Client, ctx context.Context, question string) {
-	client.CompletionStreamWithEngine(ctx, gpt3.TextDavinci003Engine, gpt3.CompletionRequest{
+	err := client.CompletionStreamWithEngine(ctx, gpt3.TextDavinci003Engine, gpt3.CompletionRequest{
 		Prompt: []string{
 			question,
 		},
@@ -34,6 +35,7 @@ type NullWriter int
 func (NullWriter) Write([]byte) (int, error) { return 0, nil }
 
 func main() {
+	log.SetOutput(new(NullWriter))
 	viper.SetConfigFile(".env")
 	viper.ReadInConfig()
 	apiKey := viper.GetString("API_KEY")
