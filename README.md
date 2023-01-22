@@ -33,7 +33,7 @@ cd ChatGenie
 go mod tidy
 ```
 
-4.  Generate an Open AI API key from the [website](https://beta.openai.com/account/api-keys)
+4.  Generate an  API key from the OPEN AI [website](https://beta.openai.com/account/api-keys)
 
 ![image](https://user-images.githubusercontent.com/98258627/213876014-b3f15700-e279-4515-bb25-b706d63e75b6.png)
 
