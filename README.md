@@ -47,7 +47,7 @@ go mod tidy
 go run main.go
 
 ```
-7.  Start chatting with ChatGPT by typing in a question or statement and pressing enter.
+7.  Start chatting with Chatbot by typing in a question or statement and pressing enter.
 
 ### Using the chatbot
 
